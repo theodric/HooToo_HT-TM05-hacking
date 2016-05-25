@@ -31,4 +31,6 @@ head -n $(( ${SPLITLINE} - 1 )) ${UPDATE_FILENAME} > start_script.sh
 # mount it somewhere we can work on it
 mkdir ${MOUNTDIR}
 mount -o loop -t ext2 initrdup ${MOUNTDIR}
+echo Mounted at ${MOUNTDIR}
+echo glhf
 
