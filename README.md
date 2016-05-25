@@ -5,11 +5,11 @@
 * Updated Download-and-split script to grab the latest firmware file, and to use unrar rather than unzip since the archive type has changed. Also updated the relevant variable name to reflect. That's it.
 * Added checksum script "checksum_tool.sh"
 * Added mksquashfs script "squish.sh"
+* Removed the HooToo firmware to avoid possibly drawing their ire. It's available elsewhere. No need for a mirror here.
 
 
-
-
-What follows below is a portion of the original readme from cryptographrix's repo, where the Download-and-split.sh script came from
+------------------------------------------------------------------------------------------------------------------------------------
+What follows below is a portion of the original readme from cryptographrix's repo, where the Download-and-split.sh script came from.
 See: https://github.com/cryptographrix/HooToo_HT-TM05-hacking
 
 ## cryptographrix/HooToo_HT-TM05-hacking
