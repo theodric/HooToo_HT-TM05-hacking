@@ -1,8 +1,10 @@
+#HooToo HT-TM05 hacking
+
 ##begin changes made by theodric
 
-Updated Download-and-split script to grab the latest firmware file, and to use unrar rather than unzip since the archive type has changed.
-
-Also updated the relevant variable name to reflect. That's it.
+* Updated Download-and-split script to grab the latest firmware file, and to use unrar rather than unzip since the archive type has changed. Also updated the relevant variable name to reflect. That's it.
+* Added checksum script
+* Added mksquashfs script
 
 ##end changes made by theodric
 
