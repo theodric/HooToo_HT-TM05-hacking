@@ -1,8 +1,0 @@
-#!/bin/sh
-# tar etc package
-#/usr/sbin/etc_tools t
-. /etc/init.d/vstfunc
-
-backup_etc
-
-exit
