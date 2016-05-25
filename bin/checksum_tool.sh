@@ -5,4 +5,4 @@
 #the checksum is of the entire firmware stub minus the top three lines of the file, the last of which contains the CRCSUM.
 #So you have to assemble your firmware, run this to get the checksum, add the CRCSUM into the start_script.sh, and assemble again.
 
-sed '1,3d' $0|cksum|sed -e 's/ /Z/' -e 's/   /Z/'|cut -dZ -f1
+sed '1,3d' $1|cksum|sed -e 's/ /Z/' -e 's/   /Z/'|cut -dZ -f1
