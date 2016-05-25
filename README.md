@@ -1,12 +1,16 @@
-#HooToo HT-TM05 hacking
+#HooToo HT-TM05 hacking stuff and junk
+####theodric's edition
 
-##begin changes made by theodric
-
+20160525:
 * Updated Download-and-split script to grab the latest firmware file, and to use unrar rather than unzip since the archive type has changed. Also updated the relevant variable name to reflect. That's it.
 * Added checksum script "checksum_tool.sh"
 * Added mksquashfs script "squish.sh"
 
-##end changes made by theodric
+
+
+
+What follows below is a portion of the original readme from cryptographrix's repo, where the Download-and-split.sh script came from
+See: https://github.com/cryptographrix/HooToo_HT-TM05-hacking
 
 ## cryptographrix/HooToo_HT-TM05-hacking
 
@@ -37,12 +41,3 @@ Anything you want - eventually you'll need to reverse the process:
 2. gzip initrdup
 3. cat start-script.sh initrdup.gz > fw_...
 4. zip fw into HooToo....
-
-#### And just who are you?....
-
-My name is Michael Renz and I just write random stuff like this...
-
-#### Hi, this is HooToo and we'd like you to censor/remove/change....
-
-Email me here: [cryptographrix@gmail.com](mailto:cryptographrix@gmail.com?subject=[HooToo hacking] Just who the hell do you think you are??!?!??)
-
