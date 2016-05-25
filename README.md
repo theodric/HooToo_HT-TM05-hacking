@@ -4,7 +4,7 @@
 20160525:
 * Updated Download-and-split script to grab the latest firmware file, and to use unrar rather than unzip since the archive type has changed. Also updated the relevant variable name to reflect. That's it.
 * Added checksum script "checksum_tool.sh"
-* Added mksquashfs script "squish.sh" for repackaging the unsquashfs'd rootfs file from initrdup/firmware/rootfs
+* Added mksquashfs script "squish.sh" for resquashing the unsquashfs'd rootfs file from initrdup/firmware/rootfs
 * Removed the HooToo firmware to avoid possibly drawing their ire. It's available elsewhere. No need for a mirror here.
 
 
