@@ -9,12 +9,23 @@ See the thread on the OpenWRT forum for more information: https://forum.openwrt.
 * Added mksquashfs script "squish.sh" for resquashing the unsquashfs'd rootfs file from initrdup/firmware/rootfs
 * Removed the HooToo firmware to avoid possibly drawing their ire. It's available elsewhere. No need for a mirror here.
 
+I have successfully unpacked, modified, repacked, and reflashed a firmware image with this workflow:
 
-
-
-
-
-
+* Run Linux. OS X won't mount the initrdup ext2 image.
+* Use Download-and-split.sh to grab and mount the latest firmware
+* Use unsquashfs to unpack the firmware/rootfs file inside the initrdup somewhere outside the initrdup
+* Make desired changes to the rootfs
+* Use squish.sh to re-squashfs the rootfs file
+* Replace the initrdup's firmware/rootfs file with your modified one
+* sync and umount the initrdup
+* gzip initrdup
+* cat start_script.sh initrdup.gz > firmware_image_file
+* checksum_tool.sh firmware_image.bin
+* replace the CRCSUM value in start_script.sh with the one output by checksum_tool.sh
+* once again, cat start_script.sh initrdup.gz > firmware_image_file
+* flash the firmware_image_file onto your HT-TM05 using the regular web GUI
+* hope that it doesn't brick it
+* good luck
 
 ------------------------------------------------------------------------------------------------------------------------------------
 What follows below is a portion of the original readme from cryptographrix's repo, where the Download-and-split.sh script came from.
