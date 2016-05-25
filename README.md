@@ -1,6 +1,8 @@
 #HooToo HT-TM05 hacking stuff and junk
 ####theodric's edition
 
+See the thread on the OpenWRT forum for more information: https://forum.openwrt.org/viewtopic.php?id=61445
+
 20160525:
 * Updated Download-and-split script to grab the latest firmware file, and to use unrar rather than unzip since the archive type has changed. Also updated the relevant variable name to reflect. That's it.
 * Added checksum script "checksum_tool.sh"
