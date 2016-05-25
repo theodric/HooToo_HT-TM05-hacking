@@ -11,7 +11,8 @@ See the thread on the OpenWRT forum for more information: https://forum.openwrt.
 
 I have successfully unpacked, modified, repacked, and reflashed a firmware image with this workflow:
 
-* Run Linux. OS X won't mount the initrdup ext2 image.
+* Run Linux, because OS X won't mount the initrdup ext2 image
+* Install the squashfs tools package appropriate to your distribution
 * Use Download-and-split.sh to grab and mount the latest firmware
 * Use unsquashfs to unpack the firmware/rootfs file inside the initrdup somewhere outside the initrdup
 * Make desired changes to the rootfs
@@ -25,7 +26,7 @@ I have successfully unpacked, modified, repacked, and reflashed a firmware image
 * once again, cat start_script.sh initrdup.gz > firmware_image_file
 * flash the firmware_image_file onto your HT-TM05 using the regular web GUI
 * hope that it doesn't brick it
-* good luck
+* glhf
 
 ------------------------------------------------------------------------------------------------------------------------------------
 What follows below is a portion of the original readme from cryptographrix's repo, where the Download-and-split.sh script came from.
