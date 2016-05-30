@@ -28,15 +28,16 @@ I have successfully unpacked, modified, repacked, and reflashed a firmware image
 15 hope that it doesn't brick it
 16 glhf
 
-#TODO 20160530
+###TODO 20160530
 * figure out how much space I actually have to work with in each of the MTD partitions so I don't cause myself problems
 * implement automatic pull-in of optware or entware on either an ext2 USB flash drive or (better?) a loop-mounted ext2 fs image on a *FAT/NTFS-formatted disk
-* make an /etc/profile part of the default image
+* make an /etc/profile part of the default image, and have it source something useful to making the CLI environment more user-friendly.
 * no really totally actually make a /root directory that's at least somewhat writeable (tmpfs? symlink to /etc/root?)
 * various cleanups and assorted whatnots
 
-####I found a couple other interesting projects that are relevant to the OS running on the HT-TM05
+#####I found a couple other interesting projects that are relevant to the OS running on the HT-TM05
 https://github.com/wingspinner/Tripmate-HT-TM02-Telnet-Enabling
+
 https://github.com/digidem/filehub-config/blob/master/README.md
 
 ------------------------------------------------------------------------------------------------------------------------------------
