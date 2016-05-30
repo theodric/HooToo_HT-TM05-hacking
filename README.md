@@ -11,22 +11,33 @@ See the thread on the OpenWRT forum for more information: https://forum.openwrt.
 
 I have successfully unpacked, modified, repacked, and reflashed a firmware image with this workflow:
 
-* Run Linux, because OS X won't mount the initrdup ext2 image
-* Install the squashfs tools package appropriate to your distribution
-* Use Download-and-split.sh to grab and mount the latest firmware
-* Use unsquashfs to unpack the firmware/rootfs file inside the initrdup somewhere outside the initrdup
-* Make desired changes to the rootfs
-* Use squish.sh to re-squashfs the rootfs file
-* Replace the initrdup's firmware/rootfs file with your modified one
-* sync and umount the initrdup
-* gzip initrdup
-* cat start_script.sh initrdup.gz > firmware_image_file
-* checksum_tool.sh firmware_image.bin
-* replace the CRCSUM value in start_script.sh with the one output by checksum_tool.sh
-* once again, cat start_script.sh initrdup.gz > firmware_image_file
-* flash the firmware_image_file onto your HT-TM05 using the regular web GUI
-* hope that it doesn't brick it
-* glhf
+1 Run Linux, because OS X won't mount the initrdup ext2 image
+2 Install the squashfs tools package appropriate to your distribution
+3 Use Download-and-split.sh to grab and mount the latest firmware
+4 Use unsquashfs to unpack the firmware/rootfs file inside the initrdup somewhere outside the initrdup
+5 Make desired changes to the rootfs
+6 Use squish.sh to re-squashfs the rootfs file
+7 Replace the initrdup's firmware/rootfs file with your modified one
+8 sync and umount the initrdup
+9 gzip initrdup
+10 cat start_script.sh initrdup.gz > firmware_image_file
+11 checksum_tool.sh firmware_image.bin
+12 replace the CRCSUM value in start_script.sh with the one output by checksum_tool.sh
+13 once again, cat start_script.sh initrdup.gz > firmware_image_file
+14 flash the firmware_image_file onto your HT-TM05 using the regular web GUI
+15 hope that it doesn't brick it
+16 glhf
+
+#TODO 20160530
+* figure out how much space I actually have to work with in each of the MTD partitions so I don't cause myself problems
+* implement automatic pull-in of optware or entware on either an ext2 USB flash drive or (better?) a loop-mounted ext2 fs image on a *FAT/NTFS-formatted disk
+* make an /etc/profile part of the default image
+* no really totally actually make a /root directory that's at least somewhat writeable (tmpfs? symlink to /etc/root?)
+* various cleanups and assorted whatnots
+
+####I found a couple other interesting projects that are relevant to the OS running on the HT-TM05
+https://github.com/wingspinner/Tripmate-HT-TM02-Telnet-Enabling
+https://github.com/digidem/filehub-config/blob/master/README.md
 
 ------------------------------------------------------------------------------------------------------------------------------------
 What follows below is a portion of the original readme from cryptographrix's repo, where the Download-and-split.sh script came from.
