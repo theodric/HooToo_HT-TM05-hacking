@@ -1,13 +1,18 @@
 Unstructured notes about how the firmware is built
 
 /proc/vs_battery_quantity seems to store the current battery%...?
+
 If you run shutdown/poweroff/reboot from inside the shell, your device will reset to factory defaults! Don't do this. Maybe I should hack around it.
+
 etc is synced to the mtd7 partition at shutdown (using power button). That means you can create an /etc/root and have a writable $home for root using the mountroot-noentwhere script but you need to be careful not to exceed the capacity of the MTD.
 
 
-Deviations from HooToo stock include:
+Deviations from HooToo stock firmware include:
+
 SSH server (dropbear) and telnet server
+
 The entware/optware system that runs off a USB stick: see /etc/entware-env.sh
 e2fsck.static which should be kept on the USB stick
+
 /etc/init.d/mount_external_loopfs.sh and /etc/init.d/mountroot-noentwhere
 
