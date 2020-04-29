@@ -9,6 +9,8 @@ etc is synced to the mtd7 partition at shutdown (using power button). That means
 
 Deviations from HooToo stock firmware include:
 
+newer busybox with many more functions
+
 SSH server (dropbear) and telnet server
 
 The entware/optware system that runs off a USB stick: see /etc/entware-env.sh
