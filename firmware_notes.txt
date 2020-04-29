@@ -1,6 +1,6 @@
 Unstructured notes about how the firmware is built
 
-/proc/vs_battery_quantity seems to store the current battery%...?
+/proc/vs_battery_quantity stores the current battery%
 
 If you run shutdown/poweroff/reboot from inside the shell, your device will reset to factory defaults! Don't do this. Maybe I should hack around it.
 
