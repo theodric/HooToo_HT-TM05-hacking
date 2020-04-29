@@ -12,7 +12,8 @@ Deviations from HooToo stock firmware include:
 SSH server (dropbear) and telnet server
 
 The entware/optware system that runs off a USB stick: see /etc/entware-env.sh
-Install entware-ng which works with 2.6.36 kernels by downloading and executing https://pkg.entware.net/binaries/mipsel/installer/installer.sh
+Install entware-ng which works with 2.6.36 kernels by downloading and executing http://pkg.entware.net/binaries/mipsel/installer/installer.sh
+Possibly of interest...? https://www.snbforums.com/threads/mips-entware-backports-repo-entware-ng-reloaded.49468/
 
 e2fsck.static which should be kept on the USB stick
 
